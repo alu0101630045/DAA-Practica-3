@@ -1,0 +1,870 @@
+================================================================================
+Procesando: instance/instance_horizon7_employees5_shifts3_000.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 5, Días: 7
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6
+     Empleado 0  T0  T0  T0  T1  T2  T2  T0
+     Empleado 1   R   R  T1   R   R   R  T2
+     Empleado 2  T2   R   R   R  T1   R   R
+     Empleado 3  T1  T1   R  T2  T0  T1   R
+     Empleado 4   R  T2  T2  T0   R  T0  T1
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 0 (requerido: 0) ✓
+    Empleado 1: 5 (requerido: 2) ✓
+    Empleado 2: 5 (requerido: 2) ✓
+    Empleado 3: 2 (requerido: 1) ✓
+    Empleado 4: 2 (requerido: 1) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 137
+  Turnos cubiertos: 21 / 21
+  Función objetivo: 2237
+    (Cálculo: 137 + 21 * 100 = 2237)
+Tiempo de ejecución: 0 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon7_employees5_shifts3_001.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 5, Días: 7
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6
+     Empleado 0  T2  T0   R  T0  T0  T0  T2
+     Empleado 1   R  T2  T2   R   R  T1  T0
+     Empleado 2   R  T1   R   R  T2  T2   R
+     Empleado 3  T1   R  T1  T2   R   R  T1
+     Empleado 4  T0   R  T0  T1  T1   R   R
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 1 (requerido: 1) ✓
+    Empleado 1: 3 (requerido: 2) ✓
+    Empleado 2: 4 (requerido: 2) ✓
+    Empleado 3: 3 (requerido: 2) ✓
+    Empleado 4: 3 (requerido: 2) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 127
+  Turnos cubiertos: 21 / 21
+  Función objetivo: 2227
+    (Cálculo: 127 + 21 * 100 = 2227)
+Tiempo de ejecución: 0 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon7_employees10_shifts6_000.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 10, Días: 7
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6
+     Empleado 0   R  T3   R   R  T4  T4   R
+     Empleado 1  T5  T2  T2  T0  T1  T3  T4
+     Empleado 2   R   R   R   R   R   R   R
+     Empleado 3   R   R  T5  T5   R   R  T5
+     Empleado 4  T4  T1  T1  T4  T3  T2  T3
+     Empleado 5  T1  T0  T0  T1  T0  T1  T1
+     Empleado 6  T3  T5  T3  T3  T5  T0  T2
+     Empleado 7   R   R   R   R   R   R   R
+     Empleado 8  T2   R   R   R   R   R   R
+     Empleado 9  T0  T4  T4  T2  T2  T5  T0
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 4 (requerido: 1) ✓
+    Empleado 1: 0 (requerido: 0) ✓
+    Empleado 2: 7 (requerido: 2) ✓
+    Empleado 3: 4 (requerido: 1) ✓
+    Empleado 4: 0 (requerido: 0) ✓
+    Empleado 5: 0 (requerido: 0) ✓
+    Empleado 6: 0 (requerido: 0) ✓
+    Empleado 7: 7 (requerido: 2) ✓
+    Empleado 8: 6 (requerido: 2) ✓
+    Empleado 9: 0 (requerido: 0) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 301
+  Turnos cubiertos: 42 / 42
+  Función objetivo: 4501
+    (Cálculo: 301 + 42 * 100 = 4501)
+Tiempo de ejecución: 1 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon7_employees10_shifts6_001.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 10, Días: 7
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6
+     Empleado 0  T0  T5  T1  T0  T0  T0  T1
+     Empleado 1  T1   R   R   R   R   R  T5
+     Empleado 2   R   R  T5   R   R   R  T3
+     Empleado 3  T2  T0  T0  T1  T4  T1  T0
+     Empleado 4   R  T2  T4   R  T1   R  T2
+     Empleado 5  T3  T4   R  T4  T2  T2   R
+     Empleado 6   R   R  T3   R   R   R   R
+     Empleado 7  T5  T1   R  T3  T5  T5   R
+     Empleado 8   R   R  T2  T5  T3  T3   R
+     Empleado 9  T4  T3   R  T2   R  T4  T4
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 0 (requerido: 0) ✓
+    Empleado 1: 5 (requerido: 2) ✓
+    Empleado 2: 5 (requerido: 2) ✓
+    Empleado 3: 0 (requerido: 0) ✓
+    Empleado 4: 3 (requerido: 1) ✓
+    Empleado 5: 2 (requerido: 1) ✓
+    Empleado 6: 6 (requerido: 2) ✓
+    Empleado 7: 2 (requerido: 1) ✓
+    Empleado 8: 3 (requerido: 1) ✓
+    Empleado 9: 2 (requerido: 1) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 299
+  Turnos cubiertos: 42 / 42
+  Función objetivo: 4499
+    (Cálculo: 299 + 42 * 100 = 4499)
+Tiempo de ejecución: 1 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon14_employees10_shifts6_000.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 10, Días: 14
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13
+     Empleado 0   R   R  T4   R  T1   R  T2   R   R  T2   R   R   R   R
+     Empleado 1  T2  T0  T3  T0  T5  T1  T0  T0  T4  T0  T4  T3  T0  T0
+     Empleado 2  T0  T5  T0  T1  T0  T0  T1  T2  T0  T4  T0  T0  T1  T1
+     Empleado 3   R   R  T1   R   R   R  T5  T5   R   R   R  T5   R  T2
+     Empleado 4  T4  T2   R  T3   R  T4   R  T3  T2   R  T2  T2  T5   R
+     Empleado 5  T5   R   R   R   R   R  T3   R   R  T3   R   R   R  T5
+     Empleado 6   R   R   R   R   R   R  T4   R   R   R   R   R   R  T4
+     Empleado 7  T1  T1  T5  T5  T3  T3   R  T1  T1  T5  T3  T4  T3   R
+     Empleado 8  T3  T4   R  T4  T2  T5   R  T4  T3   R  T1  T1  T2   R
+     Empleado 9   R  T3  T2  T2  T4  T2   R   R  T5  T1  T5   R  T4  T3
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 10 (requerido: 2) ✓
+    Empleado 1: 0 (requerido: 0) ✓
+    Empleado 2: 0 (requerido: 0) ✓
+    Empleado 3: 9 (requerido: 2) ✓
+    Empleado 4: 5 (requerido: 1) ✓
+    Empleado 5: 10 (requerido: 2) ✓
+    Empleado 6: 12 (requerido: 3) ✓
+    Empleado 7: 2 (requerido: 1) ✓
+    Empleado 8: 4 (requerido: 1) ✓
+    Empleado 9: 4 (requerido: 1) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 7: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 8: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 9: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 10: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 11: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 12: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 13: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 582
+  Turnos cubiertos: 84 / 84
+  Función objetivo: 8982
+    (Cálculo: 582 + 84 * 100 = 8982)
+Tiempo de ejecución: 3 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon14_employees10_shifts6_001.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 10, Días: 14
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13
+     Empleado 0   R   R   R   R   R  T3  T4   R  T4   R   R  T5   R  T5
+     Empleado 1   R   R  T5   R  T4   R  T3   R  T2  T5   R  T3  T5   R
+     Empleado 2   R   R   R  T4   R   R  T0   R   R   R   R   R  T4  T2
+     Empleado 3   R   R  T1  T5   R   R  T2   R   R  T0  T2   R   R  T4
+     Empleado 4  T2  T1  T4  T0  T5  T0   R  T2  T1   R  T0   R  T1  T0
+     Empleado 5  T4  T3  T0   R  T3  T2   R  T3   R  T1   R  T4  T3   R
+     Empleado 6  T0  T2  T3   R  T0  T4   R  T5  T5  T3  T3   R  T2   R
+     Empleado 7  T5  T4   R  T3   R  T5  T1  T1  T3   R  T5  T2   R  T1
+     Empleado 8  T1  T0  T2  T1  T2  T1   R  T0  T0  T4  T1  T0  T0   R
+     Empleado 9  T3  T5   R  T2  T1   R  T5  T4   R  T2  T4  T1   R  T3
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 9 (requerido: 3) ✓
+    Empleado 1: 7 (requerido: 3) ✓
+    Empleado 2: 10 (requerido: 3) ✓
+    Empleado 3: 8 (requerido: 3) ✓
+    Empleado 4: 3 (requerido: 1) ✓
+    Empleado 5: 5 (requerido: 2) ✓
+    Empleado 6: 4 (requerido: 2) ✓
+    Empleado 7: 4 (requerido: 2) ✓
+    Empleado 8: 2 (requerido: 1) ✓
+    Empleado 9: 4 (requerido: 2) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 7: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 8: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 9: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 10: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 11: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 12: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+    Día 13: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 619
+  Turnos cubiertos: 84 / 84
+  Función objetivo: 9019
+    (Cálculo: 619 + 84 * 100 = 9019)
+Tiempo de ejecución: 3 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon14_employees20_shifts10_000.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 20, Días: 14
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13
+     Empleado 0  T5  T9   R  T4  T3  T6  T3  T9  T3   R  T5  T6  T2   R
+     Empleado 1   R   R  T6   R   R  T7  T6   R   R   R  T6   R   R   R
+     Empleado 2  T7   R   R  T9  T4   R  T8  T7   R   R   R  T4  T7  T4
+     Empleado 3  T9   R  T5   R   R  T9  T2   R  T9   R   R  T3   R  T7
+     Empleado 4  T4  T8   R  T6  T6  T7  T9  T7  T4   R  T4  T7  T5   R
+     Empleado 5   R   R   R   R   R  T9  T7   R   R  T6   R  T6   R  T2
+     Empleado 6  T0  T1  T4  T5  T3  T5  T9  T1  T2  T8  T8  T0  T3  T4
+     Empleado 7   R   R  T1   R   R  T8  T8   R  T8  T5  T7   R   R  T3
+     Empleado 8  T8  T4  T4  T1  T9  T5   R   R  T1  T4  T0  T4  T4  T1
+     Empleado 9   R   R  T8  T8   R   R  T0   R  T9   R   R  T9   R  T5
+    Empleado 10  T8  T5  T6  T0  T2  T3  T1  T3  T6  T1  T0  T5  T9  T7
+    Empleado 11  T9  T2  T9  T5   R  T0  T0   R  T6  T3  T3  T7  T3  T2
+    Empleado 12  T1  T5  T7  T2  T8  T1  T7  T5  T5  T0  T1  T2  T6  T3
+    Empleado 13  T6   R  T7  T8  T2   R  T5  T4  T7   R  T9  T5  T8   R
+    Empleado 14  T4  T0  T3  T6  T1  T3  T4  T0  T0  T1  T7  T0  T5  T0
+    Empleado 15  T1   R  T2   R  T7  T8  T1  T9   R  T4   R  T1  T7  T8
+    Empleado 16  T5  T7  T5  T7  T7  T6   R  T8  T4  T7  T2  T8  T1   R
+    Empleado 17  T3  T0  T1  T3  T1  T4  T4  T6  T1  T8  T2  T3  T0  T6
+    Empleado 18  T3  T3  T2  T4  T0  T2   R  T2  T5  T9  T4   R  T4  T0
+    Empleado 19  T2  T6  T0  T0  T5  T2  T6  T3  T0  T2  T6  T1  T8  T9
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 3 (requerido: 1) ✓
+    Empleado 1: 10 (requerido: 3) ✓
+    Empleado 2: 6 (requerido: 2) ✓
+    Empleado 3: 7 (requerido: 3) ✓
+    Empleado 4: 3 (requerido: 1) ✓
+    Empleado 5: 9 (requerido: 3) ✓
+    Empleado 6: 0 (requerido: 0) ✓
+    Empleado 7: 7 (requerido: 3) ✓
+    Empleado 8: 2 (requerido: 1) ✓
+    Empleado 9: 8 (requerido: 3) ✓
+    Empleado 10: 0 (requerido: 0) ✓
+    Empleado 11: 2 (requerido: 1) ✓
+    Empleado 12: 0 (requerido: 0) ✓
+    Empleado 13: 4 (requerido: 2) ✓
+    Empleado 14: 0 (requerido: 0) ✓
+    Empleado 15: 4 (requerido: 2) ✓
+    Empleado 16: 2 (requerido: 1) ✓
+    Empleado 17: 0 (requerido: 0) ✓
+    Empleado 18: 2 (requerido: 1) ✓
+    Empleado 19: 0 (requerido: 0) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 1: T0(2/2) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(2/2) T6(1/1) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 2: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 3: T0(2/2) T1(1/1) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 4: T0(1/1) T1(2/2) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 6: T0(2/2) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(1/1) T6(2/2) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 7: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 8: T0(2/2) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 9: T0(1/1) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(1/1) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 10: T0(2/2) T1(1/1) T2(2/2) T3(1/1) T4(2/2) T5(1/1) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 11: T0(2/2) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 12: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(2/2) T8(2/2) T9(1/1) ✓
+    Día 13: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 1667
+  Turnos cubiertos: 140 / 140
+  Función objetivo: 15667
+    (Cálculo: 1667 + 140 * 100 = 15667)
+Tiempo de ejecución: 9 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon14_employees20_shifts10_001.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 20, Días: 14
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13
+     Empleado 0  T3  T9  T7  T8  T3   R  T3  T5   R   R   R  T5  T3  T3
+     Empleado 1  T9   R   R   R  T3   R  T1   R   R   R   R  T6  T6  T3
+     Empleado 2  T4  T3  T6  T3  T4  T0   R  T6  T2  T9  T1   R  T2  T2
+     Empleado 3  T5  T5  T9   R   R  T4  T0  T8  T7   R  T9  T8  T4  T6
+     Empleado 4  T3  T4  T3  T2  T8  T0  T8  T2  T2  T7  T0  T9  T0   R
+     Empleado 5  T5  T1  T9  T1  T6  T3  T9  T1  T3   R  T3  T8  T1  T2
+     Empleado 6  T0  T8  T7   R  T8  T3  T9  T4   R  T8  T6  T3  T6  T4
+     Empleado 7  T2  T2  T1  T2  T0  T2   R  T7  T1  T4  T2  T0  T2   R
+     Empleado 8   R  T6  T6  T9   R  T8   R   R  T4  T1  T9   R  T4   R
+     Empleado 9  T8   R  T2  T7   R  T8  T6   R  T6  T1  T5   R  T7  T8
+    Empleado 10  T6   R   R   R  T5  T5  T0  T2  T8  T6  T7  T5   R   R
+    Empleado 11  T0  T4   R  T0  T2  T1  T1  T0  T1  T9  T2  T7  T1  T9
+    Empleado 12  T7   R  T5  T5  T9  T9  T7  T6   R  T3  T8  T2  T9   R
+    Empleado 13   R  T9  T4   R  T5  T7   R   R   R  T6   R  T4  T7  T4
+    Empleado 14  T8  T7  T1  T4   R   R  T5  T9  T7   R  T4   R  T5  T6
+    Empleado 15   R  T8  T0  T4   R  T6  T3  T8  T9  T8  T8   R   R  T5
+    Empleado 16  T6  T1  T8  T9  T1  T6  T5  T7  T0  T0  T5  T0  T5  T1
+    Empleado 17  T1  T6  T2  T6  T7   R  T4  T3  T8  T2  T4  T2   R  T7
+    Empleado 18  T1  T0  T4  T1  T6  T5  T2  T3  T0  T3  T1  T9  T8  T0
+    Empleado 19  T9  T5  T5  T3   R   R  T2  T9  T5  T5   R  T1  T9  T5
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 4 (requerido: 2) ✓
+    Empleado 1: 8 (requerido: 3) ✓
+    Empleado 2: 2 (requerido: 1) ✓
+    Empleado 3: 3 (requerido: 2) ✓
+    Empleado 4: 1 (requerido: 1) ✓
+    Empleado 5: 1 (requerido: 1) ✓
+    Empleado 6: 2 (requerido: 2) ✓
+    Empleado 7: 2 (requerido: 1) ✓
+    Empleado 8: 6 (requerido: 3) ✓
+    Empleado 9: 4 (requerido: 3) ✓
+    Empleado 10: 5 (requerido: 2) ✓
+    Empleado 11: 1 (requerido: 1) ✓
+    Empleado 12: 3 (requerido: 2) ✓
+    Empleado 13: 6 (requerido: 3) ✓
+    Empleado 14: 4 (requerido: 3) ✓
+    Empleado 15: 4 (requerido: 3) ✓
+    Empleado 16: 0 (requerido: 0) ✓
+    Empleado 17: 2 (requerido: 2) ✓
+    Empleado 18: 0 (requerido: 0) ✓
+    Empleado 19: 3 (requerido: 3) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(2/2) T1(2/2) T2(1/1) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 1: T0(1/1) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 2: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 3: T0(1/1) T1(2/2) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 5: T0(2/2) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 6: T0(2/2) T1(2/2) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(1/1) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 7: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 8: T0(2/2) T1(2/2) T2(2/2) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(2/2) T8(2/2) T9(1/1) ✓
+    Día 9: T0(1/1) T1(2/2) T2(1/1) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 10: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 11: T0(2/2) T1(1/1) T2(2/2) T3(1/1) T4(1/1) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 12: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 13: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(1/1) T9(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 1698
+  Turnos cubiertos: 140 / 140
+  Función objetivo: 15698
+    (Cálculo: 1698 + 140 * 100 = 15698)
+Tiempo de ejecución: 9 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon30_employees20_shifts10_000.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 20, Días: 30
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29
+     Empleado 0  T3   R  T6  T6  T3  T3  T2  T5  T2   R  T3  T9  T3  T2   R  T2   R   R  T5  T3  T7  T1  T7  T2  T8  T4  T7  T2   R  T3
+     Empleado 1  T1   R   R  T1  T6  T2  T0  T8  T0  T5  T2  T5  T2   R  T9  T4   R   R  T3  T2  T2  T0  T3  T3   R   R  T6  T3  T3  T0
+     Empleado 2  T3  T9  T2  T5  T4  T8   R  T6  T2  T2  T7  T8  T0   R   R  T2   R  T4  T1  T1  T4  T9  T5  T1   R  T8  T0  T1  T5  T9
+     Empleado 3  T9   R  T6  T4  T8  T9   R  T2  T4   R   R  T7  T6  T5  T9   R   R   R  T4  T4  T2  T1  T6   R  T3  T9  T7  T4   R  T7
+     Empleado 4  T4  T2   R   R  T9   R  T8   R   R  T0  T9   R  T5   R   R   R   R  T1  T8   R  T9   R   R   R  T4  T3   R  T4   R  T3
+     Empleado 5  T6  T9  T0  T0  T0  T6  T6  T7  T3  T6  T6  T0  T8  T9  T0  T1  T0  T2  T3  T9  T6  T3  T4  T7  T0  T9  T1  T5  T0  T8
+     Empleado 6  T2   R  T3  T8  T3  T1  T1  T2  T1   R   R  T4  T2  T5  T3  T4  T1   R  T7  T0  T5  T5  T2  T0  T9  T4  T5  T0   R  T8
+     Empleado 7  T8  T2  T1   R   R   R  T1   R  T5   R  T2   R  T3  T4  T7  T6  T9  T1   R   R   R   R   R   R  T6   R   R  T8  T4  T0
+     Empleado 8  T0  T8  T7  T7  T1  T0  T9  T3  T0  T8  T0  T8  T8  T2  T5  T0  T0  T0  T0  T7  T0  T0  T0  T5  T7  T8  T5  T0  T0  T2
+     Empleado 9  T8   R  T9  T8   R  T5  T9   R  T8   R   R   R  T4  T3  T2  T9  T7   R   R  T6   R  T7  T9   R   R   R  T9  T7  T4  T7
+    Empleado 10  T1  T0   R  T0  T2  T1  T0  T0  T1  T0  T8  T0  T1  T0   R  T3  T1  T8  T0  T4  T1   R  T0  T3  T0  T1  T0  T1  T1  T1
+    Empleado 11  T4  T4   R  T1  T7   R   R  T1  T7  T8  T0  T3   R   R  T3   R  T9  T8  T6  T5   R  T2  T5  T8   R  T5  T6  T5   R  T5
+    Empleado 12  T5  T4  T5  T4   R  T4   R  T3  T6  T4  T1  T2   R  T6  T4  T5  T6  T5  T4  T6   R  T2  T6   R  T4  T6  T4  T6  T7   R
+    Empleado 13  T7  T5  T9   R   R  T5  T5   R  T9  T1  T7   R  T6   R  T5  T6  T6  T6   R   R   R  T6  T8   R  T9   R   R  T3  T2  T6
+    Empleado 14   R  T5  T4  T9   R  T7  T4   R  T6  T4   R   R  T4  T3   R   R   R  T4   R  T5  T3  T6  T9  T6  T7   R  T8   R  T6  T4
+    Empleado 15   R   R  T2  T2  T6  T2  T6  T6  T7   R  T4  T6  T7  T8  T6  T8  T3  T7  T5   R   R   R  T2   R  T5  T6  T3  T9  T9  T5
+    Empleado 16  T0  T6  T8  T3  T5   R  T3  T7  T3   R   R  T3  T0  T1  T1  T3  T8  T2  T1  T1  T7   R  T1  T1  T2  T7  T2  T2  T6   R
+    Empleado 17   R  T3  T3  T9   R  T8  T5  T9  T4  T9  T9   R   R   R  T8   R  T5  T9  T8  T8   R  T7  T8  T9  T2  T3   R   R  T7  T2
+    Empleado 18  T9  T1  T5   R   R  T4   R   R  T8  T7  T1   R  T9  T6  T8  T7  T2   R  T9  T9  T8  T8   R  T4  T1  T0   R  T6  T8   R
+    Empleado 19  T7  T7  T8  T6  T9   R  T7  T4  T9  T3  T5  T1   R  T7   R  T7  T4  T3  T2  T8  T9  T4  T3  T6  T3  T2  T4   R   R  T9
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 6 (requerido: 2) ✓
+    Empleado 1: 7 (requerido: 2) ✓
+    Empleado 2: 5 (requerido: 2) ✓
+    Empleado 3: 9 (requerido: 3) ✓
+    Empleado 4: 16 (requerido: 5) ✓
+    Empleado 5: 0 (requerido: 0) ✓
+    Empleado 6: 5 (requerido: 2) ✓
+    Empleado 7: 14 (requerido: 4) ✓
+    Empleado 8: 0 (requerido: 0) ✓
+    Empleado 9: 12 (requerido: 4) ✓
+    Empleado 10: 3 (requerido: 1) ✓
+    Empleado 11: 9 (requerido: 3) ✓
+    Empleado 12: 6 (requerido: 3) ✓
+    Empleado 13: 11 (requerido: 4) ✓
+    Empleado 14: 11 (requerido: 4) ✓
+    Empleado 15: 7 (requerido: 3) ✓
+    Empleado 16: 5 (requerido: 2) ✓
+    Empleado 17: 9 (requerido: 4) ✓
+    Empleado 18: 9 (requerido: 4) ✓
+    Empleado 19: 5 (requerido: 3) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(2/2) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(1/1) T6(1/1) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 1: T0(1/1) T1(1/1) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 2: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 3: T0(2/2) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 5: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 6: T0(2/2) T1(2/2) T2(1/1) T3(1/1) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 7: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 8: T0(2/2) T1(2/2) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 9: T0(2/2) T1(1/1) T2(1/1) T3(1/1) T4(2/2) T5(1/1) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 10: T0(2/2) T1(2/2) T2(2/2) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 11: T0(2/2) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 12: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 13: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 14: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 15: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 16: T0(2/2) T1(2/2) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(2/2) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 17: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(1/1) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 18: T0(2/2) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 19: T0(1/1) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 20: T0(1/1) T1(1/1) T2(2/2) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 21: T0(2/2) T1(2/2) T2(2/2) T3(1/1) T4(1/1) T5(1/1) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 22: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 23: T0(1/1) T1(2/2) T2(1/1) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 24: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 25: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 26: T0(2/2) T1(1/1) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 27: T0(2/2) T1(2/2) T2(2/2) T3(2/2) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 28: T0(2/2) T1(1/1) T2(1/1) T3(1/1) T4(2/2) T5(1/1) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 29: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(1/1) T7(2/2) T8(2/2) T9(2/2) ✓
+
+Métricas de la solución:
+  Satisfacción total: 3359
+  Turnos cubiertos: 300 / 300
+  Función objetivo: 33359
+    (Cálculo: 3359 + 300 * 100 = 33359)
+Tiempo de ejecución: 24 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon30_employees20_shifts10_001.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 20, Días: 30
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29
+     Empleado 0  T9  T8  T3   R  T9  T9  T5  T8  T8   R   R  T6   R   R  T0   R   R  T6  T9  T9  T7   R  T8   R   R  T5  T8   R  T8  T4
+     Empleado 1  T9  T9   R   R   R   R   R   R   R   R   R   R   R  T7  T3   R   R  T3   R   R  T5   R   R   R   R  T7  T9  T9   R  T7
+     Empleado 2  T6  T4   R  T3  T8  T1  T0  T3  T5  T6  T2  T1  T7  T5  T8  T6  T1  T3  T4  T8  T2  T7  T0  T4  T5  T9  T3  T7  T5   R
+     Empleado 3  T8  T7  T8  T8   R  T7  T9  T7   R  T9   R  T8  T8  T7  T5   R  T9  T1  T6  T9   R   R  T6   R   R  T7  T7   R  T7  T2
+     Empleado 4  T6  T0   R  T1  T3  T3  T2  T4  T7  T4  T3  T3  T0  T2   R  T8  T4   R  T5  T7  T3  T4  T3  T7  T0   R  T3  T5  T2  T3
+     Empleado 5  T5  T0  T8  T7  T1  T5  T2  T0  T0  T0  T0  T0  T0  T4  T0  T1  T3  T5  T0  T0  T8  T0  T3  T0  T7  T9  T6  T5  T3  T2
+     Empleado 6  T7  T2   R  T5  T8  T0  T3  T1  T4  T3  T9  T0  T3  T1  T7  T3  T2  T9  T3  T5  T1   R  T1  T2  T4   R  T1  T8  T4  T0
+     Empleado 7  T1   R  T4  T7  T7  T6   R   R  T2  T7  T8  T9  T6  T6  T9  T0   R  T7   R  T3  T4  T2  T6  T8  T8   R  T5  T3  T6  T8
+     Empleado 8  T2  T3  T7  T1  T5  T0  T6  T3  T5  T1   R  T4  T1  T4  T1  T5  T4   R  T1  T6  T3  T1  T2  T4  T1  T6  T0  T0  T5  T7
+     Empleado 9   R   R  T2   R   R  T6  T8   R   R   R  T5   R   R   R  T4  T9  T8   R   R   R  T9   R  T9  T9  T9   R   R   R   R  T6
+    Empleado 10  T8  T6   R   R   R   R  T3   R   R  T9  T7   R   R  T9  T7   R  T6  T4   R   R   R  T6   R   R   R   R   R  T9  T6  T1
+    Empleado 11  T3   R  T1   R  T2  T4  T1   R  T2  T8  T6  T6  T4   R  T2  T7   R   R  T9  T4  T5  T3  T7  T2  T8  T4  T9  T3  T9  T5
+    Empleado 12  T0  T4  T4  T2  T9  T2   R  T1  T6  T5  T1  T2  T4  T0  T5  T2  T5  T8  T0  T3  T1   R  T0  T5  T4   R  T4  T0  T2  T1
+    Empleado 13  T7  T1  T7  T0  T7  T3  T7  T6  T3  T2  T8  T2  T5  T1   R  T6  T0  T7  T3  T1  T4  T8  T4  T1  T2  T4  T4  T8  T1   R
+    Empleado 14   R  T5  T9   R   R  T9  T5   R   R   R  T2   R  T9   R  T3   R  T8  T2   R   R   R  T5  T8   R  T7  T2   R   R   R  T4
+    Empleado 15  T2  T2  T0  T4  T4  T4  T0  T5  T0  T2  T4  T7  T8  T5  T1  T0  T0  T8  T2  T2  T2  T4  T1  T5  T0  T0  T2  T6  T0  T9
+    Empleado 16  T3  T8  T5  T6  T6  T7  T7  T9  T4   R  T3  T5  T2  T9   R  T3  T7  T2  T7  T4   R  T5  T4  T3  T6  T1  T5  T1  T8   R
+    Empleado 17  T4  T3  T6  T6  T0  T1  T6  T2  T1  T5  T7  T3  T6  T3   R  T2  T2  T0  T2  T5  T0  T7  T2  T3  T3  T3  T2  T4  T4  T9
+    Empleado 18   R  T6  T1   R   R  T8   R   R  T9   R  T1   R   R  T8   R   R   R  T9   R   R  T6  T9   R   R  T5  T8   R   R  T7  T8
+    Empleado 19  T0   R  T3  T9  T5  T5  T4   R  T3  T7  T6  T9  T3  T6  T6  T4   R  T1  T8  T1  T6  T6  T5  T6  T9  T3  T8  T2  T9   R
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 11 (requerido: 3) ✓
+    Empleado 1: 20 (requerido: 5) ✓
+    Empleado 2: 2 (requerido: 1) ✓
+    Empleado 3: 9 (requerido: 3) ✓
+    Empleado 4: 4 (requerido: 1) ✓
+    Empleado 5: 0 (requerido: 0) ✓
+    Empleado 6: 3 (requerido: 1) ✓
+    Empleado 7: 6 (requerido: 2) ✓
+    Empleado 8: 2 (requerido: 1) ✓
+    Empleado 9: 18 (requerido: 5) ✓
+    Empleado 10: 17 (requerido: 5) ✓
+    Empleado 11: 6 (requerido: 2) ✓
+    Empleado 12: 3 (requerido: 1) ✓
+    Empleado 13: 2 (requerido: 1) ✓
+    Empleado 14: 16 (requerido: 5) ✓
+    Empleado 15: 0 (requerido: 0) ✓
+    Empleado 16: 4 (requerido: 2) ✓
+    Empleado 17: 1 (requerido: 1) ✓
+    Empleado 18: 17 (requerido: 5) ✓
+    Empleado 19: 4 (requerido: 2) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 1: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 2: T0(1/1) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(1/1) T6(1/1) T7(2/2) T8(2/2) T9(1/1) ✓
+    Día 3: T0(1/1) T1(2/2) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(2/2) T6(1/1) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 5: T0(2/2) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 6: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 7: T0(1/1) T1(2/2) T2(1/1) T3(2/2) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 8: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 9: T0(1/1) T1(1/1) T2(2/2) T3(1/1) T4(1/1) T5(2/2) T6(1/1) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 10: T0(1/1) T1(2/2) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(2/2) T8(2/2) T9(1/1) ✓
+    Día 11: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 12: T0(2/2) T1(1/1) T2(1/1) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 13: T0(1/1) T1(2/2) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 14: T0(2/2) T1(2/2) T2(1/1) T3(2/2) T4(1/1) T5(2/2) T6(1/1) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 15: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(2/2) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 16: T0(2/2) T1(1/1) T2(2/2) T3(1/1) T4(2/2) T5(1/1) T6(1/1) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 17: T0(1/1) T1(2/2) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(1/1) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 18: T0(2/2) T1(1/1) T2(2/2) T3(2/2) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 19: T0(1/1) T1(2/2) T2(1/1) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(1/1) T9(2/2) ✓
+    Día 20: T0(1/1) T1(2/2) T2(2/2) T3(2/2) T4(2/2) T5(2/2) T6(2/2) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 21: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(1/1) T9(1/1) ✓
+    Día 22: T0(2/2) T1(2/2) T2(2/2) T3(2/2) T4(2/2) T5(1/1) T6(2/2) T7(1/1) T8(2/2) T9(1/1) ✓
+    Día 23: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(1/1) T9(1/1) ✓
+    Día 24: T0(2/2) T1(1/1) T2(1/1) T3(1/1) T4(2/2) T5(2/2) T6(1/1) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 25: T0(1/1) T1(1/1) T2(1/1) T3(2/2) T4(2/2) T5(1/1) T6(1/1) T7(2/2) T8(1/1) T9(2/2) ✓
+    Día 26: T0(1/1) T1(1/1) T2(2/2) T3(2/2) T4(2/2) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 27: T0(2/2) T1(1/1) T2(1/1) T3(2/2) T4(1/1) T5(2/2) T6(1/1) T7(1/1) T8(2/2) T9(2/2) ✓
+    Día 28: T0(1/1) T1(1/1) T2(2/2) T3(1/1) T4(2/2) T5(2/2) T6(2/2) T7(2/2) T8(2/2) T9(2/2) ✓
+    Día 29: T0(1/1) T1(2/2) T2(2/2) T3(1/1) T4(2/2) T5(1/1) T6(1/1) T7(2/2) T8(2/2) T9(2/2) ✓
+
+Métricas de la solución:
+  Satisfacción total: 3384
+  Turnos cubiertos: 300 / 300
+  Función objetivo: 33384
+    (Cálculo: 3384 + 300 * 100 = 33384)
+Tiempo de ejecución: 15 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon30_employees30_shifts20_000.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 30, Días: 30
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29
+     Empleado 0   R   R   R T10   R   R  T5 T16   R   R  T9 T16   R   R   R   R T17   R T12   R T16 T10 T11   R   R   R T15   R T17 T11
+     Empleado 1 T11  T6  T6 T17  T3  T1  T2  T1  T1  T4  T4  T5 T16 T14  T0  T1  T6  T2  T1  T1  T3  T9 T19  T3  T0  T4  T2 T19  T1  T2
+     Empleado 2 T14   R   R  T9  T7 T18  T6 T15 T12   R   R T14  T7   R  T8 T12   R   R T11  T9   R  T4 T13  T8   R   R T16  T5   R T12
+     Empleado 3  T0  T8  T0  T3 T14  T0 T12 T19  T3  T3  T1  T0 T17  T3  T2  T0  T2 T18 T15 T18  T5  T0  T0  T5 T19  T2  T1 T10  T2  T0
+     Empleado 4  T1  T7  T3  T2  T2 T17 T11  T2  T0 T16  T3  T6 T10  T2 T13  T4  T4  T0  T8  T5  T2  T1  T6  T4 T16  T0  T0 T18 T19 T16
+     Empleado 5   R T15 T10   R   R   R T13   R T19 T13   R   R   R   R T18 T18   R   R   R T16   R  T7   R   R   R   R   R   R T16 T13
+     Empleado 6 T15 T11  T8  T7  T6  T7 T19 T11  T8  T6   R  T8  T8  T4 T12 T14 T10 T17  T7 T10  T9   R  T5 T13  T9 T16  T7  T3  T6   R
+     Empleado 7  T9  T2   R  T4 T11  T5  T3  T9  T9  T9 T14 T10  T5  T7   R T10  T7  T9  T5 T13  T6   R  T2 T11  T8   R  T4  T7 T10 T15
+     Empleado 8 T16 T16   R   R   R   R   R   R   R   R   R   R   R   R  T9   R   R   R T19   R T15   R   R   R   R   R   R   R T14  T4
+     Empleado 9 T10   R   R T13  T9 T14  T9 T13  T7   R T13 T15  T4   R T14  T6 T16 T12 T14  T7   R   R  T9  T9   R T12 T17 T12   R  T5
+    Empleado 10  T3  T0  T5 T15 T16 T10 T10  T3 T13  T0 T16 T19 T18 T15 T15  T9  T1 T13  T0  T3 T19 T18 T15 T10  T4  T5 T11 T11  T3  T3
+    Empleado 11  T8  T3 T11  T5  T5  T6   R  T8  T6  T7   R  T9  T2  T6 T10 T11  T9   R  T9 T12  T8 T13  T3 T14  T7 T15  T6  T1  T9   R
+    Empleado 12   R   R   R T14   R T11   R   R   R T14 T19 T18   R   R   R   R   R  T7   R T15   R   R   R T16   R T18   R   R T12   R
+    Empleado 13 T13 T10  T1  T1  T1 T12  T1  T6 T10  T1 T17  T2  T1 T16  T6  T5  T5  T6  T2  T2 T14  T6 T18  T1  T1 T19  T3  T0 T15  T1
+    Empleado 14 T18   R T14   R   R   R   R T18   R T17  T8   R   R   R   R   R   R  T8   R   R   R  T3   R   R   R T17   R   R T18  T7
+    Empleado 15 T12  T1 T13 T12  T0  T9  T7 T10 T11 T10 T18  T1  T0 T17  T1 T17  T0 T15 T10 T19  T1 T11 T14  T0  T6 T14 T10  T9  T4 T17
+    Empleado 16  T6 T18   R  T8 T10 T15   R T14  T5   R  T7 T12  T9 T19   R  T7   R T10 T13 T11 T18 T16 T12  T6 T15 T13 T13  T6   R   R
+    Empleado 17   R   R T17   R T18   R   R   R   R T12   R   R   R   R T11   R   R T14   R   R T11   R   R   R   R   R   R   R T11  T8
+    Empleado 18   R T19   R T11   R T13  T8 T12 T16   R   R T11   R T18 T17   R   R   R T17   R T13 T12  T8 T15   R  T6  T9 T16   R   R
+    Empleado 19  T2  T5  T2  T0  T4  T2  T0  T4 T17  T2  T0 T13 T15  T8 T19  T2  T3  T5 T16  T8  T0  T2  T4  T2 T12  T1 T12  T2  T7  T9
+    Empleado 20   R   R T19   R   R  T8 T17   R T18   R T15   R T19   R   R   R   R T19   R   R T17   R   R   R   R   R   R   R T13 T10
+    Empleado 21   R   R T16   R T15   R   R   R   R   R T11   R   R T10  T4 T15 T13   R   R   R   R   R T16   R T10   R T18   R   R   R
+    Empleado 22 T19 T14   R   R   R   R   R   R   R   R   R T17 T12 T13   R T16 T15   R   R   R   R   R   R T19 T17 T11   R   R   R   R
+    Empleado 23  T7 T12 T12  T6  T8  T4   R  T5  T4  T5 T12  T7  T3  T5   R  T8  T8  T4  T6  T6  T7 T19  T7 T12  T5  T8  T5  T8  T5   R
+    Empleado 24   R T17   R T18 T12   R T15 T17 T14 T18   R   R T11   R   R   R T18 T16   R T17   R T17   R   R T18   R   R T14   R  T6
+    Empleado 25 T17   R  T7   R   R   R   R   R   R T11   R   R   R  T9  T7 T19   R T11   R   R   R   R   R   R T14   R T19 T13   R   R
+    Empleado 26   R   R  T9   R T13 T16 T14   R   R T19  T6   R   R T12  T5   R T19   R T18   R T10 T15   R T17 T13  T7   R T17   R T19
+    Empleado 27  T5  T4 T15 T16 T19  T3 T16  T0  T2  T8  T2  T3 T13  T1 T16 T13 T14  T3  T3  T4 T12  T8 T10 T18  T3  T9  T8 T15  T0 T18
+    Empleado 28  T4  T9  T4 T19 T17 T19  T4  T7 T15 T15  T5  T4  T6  T0  T3  T3 T11  T1  T4  T0  T4  T5  T1  T7  T2  T3 T14  T4  T8 T14
+    Empleado 29   R T13 T18   R   R   R T18   R   R   R T10   R T14 T11   R   R T12   R   R T14   R T14 T17   R T11 T10   R   R   R   R
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 17 (requerido: 3) ✓
+    Empleado 1: 0 (requerido: 0) ✓
+    Empleado 2: 11 (requerido: 2) ✓
+    Empleado 3: 0 (requerido: 0) ✓
+    Empleado 4: 0 (requerido: 0) ✓
+    Empleado 5: 19 (requerido: 4) ✓
+    Empleado 6: 3 (requerido: 1) ✓
+    Empleado 7: 4 (requerido: 1) ✓
+    Empleado 8: 23 (requerido: 5) ✓
+    Empleado 9: 8 (requerido: 2) ✓
+    Empleado 10: 0 (requerido: 0) ✓
+    Empleado 11: 4 (requerido: 1) ✓
+    Empleado 12: 20 (requerido: 5) ✓
+    Empleado 13: 0 (requerido: 0) ✓
+    Empleado 14: 20 (requerido: 5) ✓
+    Empleado 15: 0 (requerido: 0) ✓
+    Empleado 16: 7 (requerido: 2) ✓
+    Empleado 17: 22 (requerido: 5) ✓
+    Empleado 18: 13 (requerido: 3) ✓
+    Empleado 19: 0 (requerido: 0) ✓
+    Empleado 20: 20 (requerido: 5) ✓
+    Empleado 21: 20 (requerido: 5) ✓
+    Empleado 22: 20 (requerido: 5) ✓
+    Empleado 23: 3 (requerido: 1) ✓
+    Empleado 24: 15 (requerido: 4) ✓
+    Empleado 25: 20 (requerido: 5) ✓
+    Empleado 26: 13 (requerido: 4) ✓
+    Empleado 27: 0 (requerido: 0) ✓
+    Empleado 28: 0 (requerido: 0) ✓
+    Empleado 29: 18 (requerido: 5) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 7: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 8: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 9: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 10: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 11: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 12: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 13: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 14: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 15: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 16: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 17: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 18: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 19: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 20: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 21: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 22: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 23: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 24: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 25: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 26: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 27: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 28: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 29: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 4783
+  Turnos cubiertos: 600 / 600
+  Función objetivo: 64783
+    (Cálculo: 4783 + 600 * 100 = 64783)
+Tiempo de ejecución: 32 ms
+
+
+================================================================================
+Procesando: instance/instance_horizon30_employees30_shifts20_001.json
+================================================================================
+
+=== Solución de Planificación ===
+Empleados: 30, Días: 30
+
+Asignación de turnos por empleado y día:
+       Empleado  D0  D1  D2  D3  D4  D5  D6  D7  D8  D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29
+     Empleado 0   R   R   R   R T19  T9 T16   R   R   R   R   R   R T19  T9   R   R   R   R   R   R  T2   R T18 T17   R   R   R   R T17
+     Empleado 1   R   R   R   R   R T11 T11   R   R T18   R   R T18   R T14   R   R   R   R   R T15  T9   R   R   R  T5   R T17 T18   R
+     Empleado 2  T0  T3 T19  T0  T0  T1 T19  T1  T2  T3  T1  T1 T19  T1  T1 T18  T0 T14 T16 T15  T2  T1  T0  T1  T2  T1  T0  T2  T1  T2
+     Empleado 3  T8  T6   R  T9  T8  T4  T9  T8 T12  T9   R  T8  T3  T8  T4  T4  T4   R  T7 T11  T4  T8  T9  T6  T8   R  T8  T9 T11  T8
+     Empleado 4   R   R   R   R   R T14  T6   R   R   R   R   R   R   R  T6   R   R T15   R   R T18  T5   R   R   R  T3   R   R T12  T9
+     Empleado 5 T15  T1  T0  T1 T10 T19  T2 T14  T1 T10  T7 T17 T15 T18 T18 T17 T15 T18  T1  T1  T1 T10  T2  T0  T3  T2 T19  T1  T0  T0
+     Empleado 6   R   R   R   R   R T17  T5   R   R   R   R   R   R   R T16   R T11   R   R   R T14  T3   R   R   R T13   R   R   R  T7
+     Empleado 7 T16 T16  T3 T12  T4  T0  T1  T0  T0  T0 T19  T7  T0  T7  T0  T6  T1  T0  T0  T0 T19 T19  T1 T15 T19  T0 T10 T11  T2 T16
+     Empleado 8 T13   R T16   R   R   R   R   R   R T17 T12   R   R T10   R T15   R  T9   R   R   R   R   R   R   R   R   R   R T17 T11
+     Empleado 9 T14   R T15   R   R   R   R   R   R   R   R   R T14  T9 T12   R   R   R   R   R   R T12   R   R   R   R   R   R T19 T13
+    Empleado 10   R   R  T7   R T18 T13   R   R   R T16   R   R   R T11 T15   R   R T11   R T19 T11   R   R   R   R   R   R   R   R T15
+    Empleado 11 T11 T10  T6  T4 T13  T8   R  T7 T11  T8 T17  T4  T8  T4   R T11 T10 T13  T5 T14 T10   R  T7 T12  T6   R  T6  T6  T4  T6
+    Empleado 12  T4 T15  T8 T18  T9   R T15  T9  T7   R  T3 T15  T5   R T11 T10   R   R T17  T8 T12  T6 T17  T8 T16   R T18 T15   R T14
+    Empleado 13   R   R   R   R   R   R  T8   R T18 T19 T13   R   R   R   R   R T17   R   R T17   R   R   R   R T15 T17   R   R   R T10
+    Empleado 14   R T14   R   R T17   R   R   R T19   R   R   R   R T15  T5   R T16   R   R T16   R   R   R   R   R T12   R T16   R  T5
+    Empleado 15  T1  T8 T13  T8 T12  T7 T18  T3 T15 T11 T15  T6 T10  T3   R  T1  T7 T16  T4 T13  T9 T18  T8  T2  T4  T7  T7 T13  T8   R
+    Empleado 16   R T19   R T13 T16   R  T4 T18   R T12  T9 T14 T17   R   R   R   R   R T13   R T17 T11 T12   R   R T19 T11   R   R  T3
+    Empleado 17  T3   R   R T15 T14 T12  T3 T12 T13   R   R T10 T12 T14  T8  T3 T18   R T12 T12 T13   R T18  T5 T13   R T16  T4 T13 T19
+    Empleado 18   R T17 T14 T10   R T15   R T19   R T14  T4 T16   R   R T13 T19 T13  T7 T14   R   R T17 T14 T19   R   R  T9 T18 T14   R
+    Empleado 19 T12  T2  T1  T6  T1 T16 T14  T6  T4  T7 T10  T0  T1  T0 T17 T14  T3  T1  T9  T3  T6  T0 T11 T14  T0 T18  T5 T12  T3 T12
+    Empleado 20 T19  T7  T2 T19  T6  T6  T7 T17 T14  T2  T0  T2 T13 T12  T2  T0  T8 T17  T8  T2  T7  T4  T4  T4  T7 T16 T13  T0 T10  T1
+    Empleado 21  T6  T5 T17  T7 T15  T3   R  T2  T3  T4 T14  T5  T7  T2   R  T9  T9 T19 T10  T9  T8   R  T5  T7 T10  T9  T1 T14  T9   R
+    Empleado 22 T17   R T18 T11   R T18   R T16 T16   R  T8 T12   R T16   R T16 T14 T10 T18   R   R   R T13 T17 T14   R T15   R T15   R
+    Empleado 23 T10  T9   R  T5  T7  T2 T10  T4  T6  T5   R  T9  T4  T6  T3  T5  T6  T6  T6  T4  T5   R  T3 T10  T5 T14  T3  T5  T5   R
+    Empleado 24  T7 T13  T5 T16 T11   R T12 T15  T5 T13 T18 T13  T9   R   R  T8 T12 T12 T11 T10   R   R T15  T3   R T10 T12 T10 T16   R
+    Empleado 25  T9  T4 T11  T3  T2  T5   R  T5  T8  T6 T16  T3 T11  T5   R  T7  T5  T3  T2  T7  T3 T14  T6  T9  T9  T8  T4  T8  T7   R
+    Empleado 26   R T12 T10   R   R   R T13   R T17   R  T5   R T16   R T19   R   R  T5   R T18   R T13   R T16 T12 T11   R   R   R   R
+    Empleado 27 T18 T11 T12 T14   R   R   R T11   R T15 T11 T18   R   R T10 T13   R  T2 T15   R T16 T16 T16   R T11  T4 T17 T19   R   R
+    Empleado 28  T5 T18  T9 T17  T5   R T17 T10 T10   R  T6 T11  T2 T17   R  T2 T19  T8 T19  T6   R T15 T19 T13 T18  T6 T14  T7   R T18
+    Empleado 29  T2  T0  T4  T2  T3 T10  T0 T13  T9  T1  T2 T19  T6 T13  T7 T12  T2  T4  T3  T5  T0  T7 T10 T11  T1 T15  T2  T3  T6  T4
+
+Verificación de restricciones:
+  Solución válida: SÍ
+  Días de descanso por empleado:
+    Empleado 0: 21 (requerido: 5) ✓
+    Empleado 1: 20 (requerido: 5) ✓
+    Empleado 2: 0 (requerido: 0) ✓
+    Empleado 3: 4 (requerido: 1) ✓
+    Empleado 4: 21 (requerido: 4) ✓
+    Empleado 5: 0 (requerido: 0) ✓
+    Empleado 6: 22 (requerido: 4) ✓
+    Empleado 7: 0 (requerido: 0) ✓
+    Empleado 8: 21 (requerido: 5) ✓
+    Empleado 9: 22 (requerido: 5) ✓
+    Empleado 10: 20 (requerido: 4) ✓
+    Empleado 11: 4 (requerido: 1) ✓
+    Empleado 12: 7 (requerido: 2) ✓
+    Empleado 13: 21 (requerido: 5) ✓
+    Empleado 14: 20 (requerido: 5) ✓
+    Empleado 15: 2 (requerido: 1) ✓
+    Empleado 16: 14 (requerido: 3) ✓
+    Empleado 17: 7 (requerido: 2) ✓
+    Empleado 18: 11 (requerido: 3) ✓
+    Empleado 19: 0 (requerido: 0) ✓
+    Empleado 20: 0 (requerido: 0) ✓
+    Empleado 21: 4 (requerido: 1) ✓
+    Empleado 22: 12 (requerido: 3) ✓
+    Empleado 23: 4 (requerido: 1) ✓
+    Empleado 24: 7 (requerido: 2) ✓
+    Empleado 25: 3 (requerido: 1) ✓
+    Empleado 26: 17 (requerido: 5) ✓
+    Empleado 27: 11 (requerido: 3) ✓
+    Empleado 28: 5 (requerido: 2) ✓
+    Empleado 29: 0 (requerido: 0) ✓
+
+  Cobertura de turnos por día:
+    Día 0: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 1: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 2: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 3: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 4: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 5: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 6: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 7: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 8: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 9: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 10: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 11: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 12: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 13: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 14: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 15: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 16: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 17: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 18: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 19: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 20: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 21: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 22: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 23: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 24: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 25: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 26: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 27: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 28: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+    Día 29: T0(1/1) T1(1/1) T2(1/1) T3(1/1) T4(1/1) T5(1/1) T6(1/1) T7(1/1) T8(1/1) T9(1/1) T10(1/1) T11(1/1) T12(1/1) T13(1/1) T14(1/1) T15(1/1) T16(1/1) T17(1/1) T18(1/1) T19(1/1) ✓
+
+Métricas de la solución:
+  Satisfacción total: 4743
+  Turnos cubiertos: 600 / 600
+  Función objetivo: 64743
+    (Cálculo: 4743 + 600 * 100 = 64743)
+Tiempo de ejecución: 33 ms

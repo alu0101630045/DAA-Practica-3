@@ -43,11 +43,46 @@ Solucion* DyVPlanificacion::SolveSmall(const Instancia& instancia) const {
     const auto* inst_plan = dynamic_cast<const InstanciaPlanificacion*>(&instancia);
     if (!inst_plan) return nullptr;
 
-    // Para una instancia pequeña (1 día), simplemente asignar turnos sin considerar días libres globales
-    // Los días libres se resolverán cuando se combinen las soluciones
-    SolucionPlanificacion* solucion = GreedyResolveDayRange(*inst_plan, 0, inst_plan->get_numero_dias() - 1);
-    // No aplicamos AdjustRestDays aquí porque para subproblemas de 1 día es demasiado restrictivo
+    int num_empleados = inst_plan->get_numero_empleados();
+    int num_dias = inst_plan->get_numero_dias();
+
+    // Manejo de seguridad por si llega una instancia de 0 días
+    if (num_dias <= 0) {
+        return new SolucionPlanificacion(num_empleados, 0);
+    }
+
+    // Como Small() garantiza que num_dias es 1, creamos la solución para 1 día
+    SolucionPlanificacion* solucion = new SolucionPlanificacion(num_empleados, 1);
     
+    // Solo tenemos que resolver el día 0 relativo de esta subinstancia
+    int dia_relativo = 0; 
+    int num_turnos = inst_plan->get_turnos().size();
+
+    // Asignación voraz pura: iteramos por cada turno del día
+    for (int turno = 0; turno < num_turnos; ++turno) {
+        int requeridos = inst_plan->get_empleados_necesarios_dia_turno(dia_relativo, turno);
+        
+        std::vector<std::pair<int, int>> candidatos;  // {satisfacción, empleado}
+        
+        // Recolectar candidatos disponibles
+        for (int emp = 0; emp < num_empleados; ++emp) {
+            // Un empleado es candidato solo si no tiene ya un turno asignado en este día
+            if (solucion->get_turno_empleado_dia(emp, dia_relativo) == -1) {
+                int satisfaccion = inst_plan->get_satisfaccion_empleado_dia(emp, dia_relativo, turno);
+                candidatos.push_back({satisfaccion, emp});
+            }
+        }
+        
+        // Ordenar candidatos por satisfacción de mayor a menor
+        std::sort(candidatos.rbegin(), candidatos.rend());
+        
+        // Asignar el turno a los 'N' mejores candidatos hasta cubrir la demanda
+        for (int i = 0; i < std::min(requeridos, (int)candidatos.size()); ++i) {
+            int emp = candidatos[i].second;
+            solucion->set_turno_empleado_dia(emp, dia_relativo, turno);
+        }
+    }
+
     return solucion;
 }
 
@@ -91,77 +126,6 @@ Solucion* DyVPlanificacion::Combine(const Solucion& solucion1, const Solucion& s
     }
 
     return solucion_combinada;
-}
-
-SolucionPlanificacion* DyVPlanificacion::GreedyResolveDayRange(const InstanciaPlanificacion& instancia,
-                                                                 int dia_inicio, int dia_fin) const {
-    int num_empleados = instancia.get_numero_empleados();
-    int num_dias = dia_fin - dia_inicio + 1;
-    
-    SolucionPlanificacion* solucion = new SolucionPlanificacion(num_empleados, num_dias);
-
-    // Calcular máximo turnos por empleado para respetar días libres aproximadamente
-    std::vector<int> max_turnos(num_empleados);
-    std::vector<int> turnos_asignados(num_empleados, 0);
-    int total_dias = instancia.get_numero_dias();
-    
-    for (int emp = 0; emp < num_empleados; ++emp) {
-        int dias_libres_necesarios = instancia.get_dias_libres_necesarios(emp);
-        int dias_libres_en_rango = (dias_libres_necesarios * num_dias + total_dias - 1) / total_dias;  // ceil
-        max_turnos[emp] = num_dias - dias_libres_en_rango;
-        if (max_turnos[emp] < 0) max_turnos[emp] = 0;
-    }
-
-    // Para cada día, asignar turnos de manera voraz
-    for (int dia_relativo = 0; dia_relativo < num_dias; ++dia_relativo) {
-        int num_turnos = instancia.get_turnos().size();
-        
-        // Para cada turno, asignar empleados de manera voraz maximizando satisfacción
-        for (int turno = 0; turno < num_turnos; ++turno) {
-            int requeridos = instancia.get_empleados_necesarios_dia_turno(dia_relativo, turno);
-            
-            // Encontrar los mejores empleados para este turno
-            std::vector<std::pair<int, int>> candidatos;  // {satisfacción, empleado}
-            
-            for (int emp = 0; emp < num_empleados; ++emp) {
-                if (CanAssignTurno(instancia, *solucion, emp, dia_relativo, turno, turnos_asignados, max_turnos)) {
-                    int satisfaccion = instancia.get_satisfaccion_empleado_dia(emp, dia_relativo, turno);
-                    candidatos.push_back({satisfaccion, emp});
-                }
-            }
-            
-            // Ordenar por satisfacción descendente
-            std::sort(candidatos.rbegin(), candidatos.rend());
-            
-            // Asignar los mejores candidatos
-            for (int i = 0; i < std::min(requeridos, (int)candidatos.size()); ++i) {
-                int emp = candidatos[i].second;
-                solucion->set_turno_empleado_dia(emp, dia_relativo, turno);
-                turnos_asignados[emp]++;
-            }
-        }
-    }
-
-    return solucion;
-}
-
-bool DyVPlanificacion::CanAssignTurno(const InstanciaPlanificacion& instancia,
-                                      const SolucionPlanificacion& solucion,
-                                      int empleado, int dia, int turno,
-                                      const std::vector<int>& turnos_asignados,
-                                      const std::vector<int>& max_turnos) const {
-    // Un empleado ya tiene turno asignado este día
-    if (solucion.get_turno_empleado_dia(empleado, dia) != -1) {
-        return false;
-    }
-
-    // Verificar límite de turnos para respetar días libres
-    if (!max_turnos.empty() && !turnos_asignados.empty() && 
-        turnos_asignados[empleado] >= max_turnos[empleado]) {
-        return false;
-    }
-
-    return true;
 }
 
 void DyVPlanificacion::AdjustRestDays(const InstanciaPlanificacion& instancia,
