@@ -1,8 +1,8 @@
 CXX = g++
 TARGET = p03_dyv
-CXXFLAGS = -std=c++17
+CXXFLAGS = -std=c++17 -Ilib -Ilib/base -Ilib/dyv -Ilib/sorting -Ilib/utils
 
-SRCS = $(wildcard src/*.cc)
+SRCS = $(shell find src -name '*.cc' | sort)
 OBJS = $(patsubst src/%.cc, build/%.o, $(SRCS))
 
 all: $(TARGET)
@@ -13,7 +13,8 @@ $(TARGET): $(OBJS)
 
 # Compilar objetos
 build/%.o: src/%.cc | build
-	$(CXX) $(CXXFLAGS) -Iinclude -c $< -o $@
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Crear carpeta build si no existe
 build:
