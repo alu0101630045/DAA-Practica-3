@@ -4,8 +4,7 @@
   * Grado en Ingeniería Informática
   * Diseño y Análisis de Algoritmos 2025-2026
   * Curso: 3º
-  * 
-  * @author Pablo García de los Reyes
+  * * @author Pablo García de los Reyes
   * @author César Navarro Santos
   * @description: Funciones para la práctica 3 de DAA
   * @date 07 Mar 2026
@@ -30,18 +29,25 @@ Solucion* QuickSort::SolveSmall(const Instancia& instancia) const {
 std::pair<Instancia*, Instancia*> QuickSort::Divide(const Instancia& instancia) const {
     const InstanciaArray& instancia_array = dynamic_cast<const InstanciaArray&>(instancia);
     const std::vector<int>& secuencia = instancia_array.get_instance();
-    int pivot = secuencia[0];
+    size_t pivot_index = secuencia.size() / 2;
+    int pivot = secuencia[pivot_index];
+    
     std::vector<int> left, right;
+    left.reserve(secuencia.size());
+    right.reserve(secuencia.size());
+    
     for (size_t i = 0; i < secuencia.size(); ++i) {
-        if (i == 0) continue; 
+        if (i == pivot_index) continue; // Saltamos el índice del pivote
+        
         int num = secuencia[i];
-        if (num <= pivot) {
+        if (num < pivot) {
             left.push_back(num);
         } else {
             right.push_back(num);
         }
     }
-    right.push_back(pivot);
+    
+    left.push_back(pivot);  
     return {new InstanciaArray(left), new InstanciaArray(right)};
 }
 
@@ -50,9 +56,12 @@ Solucion* QuickSort::Combine(const Solucion& solucion1, const Solucion& solucion
     const SolucionArray& sol2 = dynamic_cast<const SolucionArray&>(solucion2);
     const std::vector<int>& left = sol1.get_solution();
     const std::vector<int>& right = sol2.get_solution();
+    
     std::vector<int> combined;
     combined.reserve(left.size() + right.size());
+    
     combined.insert(combined.end(), left.begin(), left.end());
     combined.insert(combined.end(), right.begin(), right.end());
+    
     return new SolucionArray(combined);
 }

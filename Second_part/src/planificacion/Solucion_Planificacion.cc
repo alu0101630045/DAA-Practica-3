@@ -107,13 +107,6 @@ bool SolucionPlanificacion::es_valida(const InstanciaPlanificacion& instancia) c
         }
     }
 
-    // Restricción 3: Un empleado no puede trabajar dos turnos en el mismo día
-    for (int e = 0; e < numero_empleados_; ++e) {
-        for (int d = 0; d < numero_dias_; ++d) {
-            // Este es implícito en nuestra representación (un valor por célula)
-        }
-    }
-
     return true;
 }
 

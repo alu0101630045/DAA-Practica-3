@@ -33,7 +33,8 @@ std::vector<std::string> GetInstanceFiles() {
         "instance/instance_horizon30_employees20_shifts10_000.json",
         "instance/instance_horizon30_employees20_shifts10_001.json",
         "instance/instance_horizon30_employees30_shifts20_000.json",
-        "instance/instance_horizon30_employees30_shifts20_001.json"
+        "instance/instance_horizon30_employees30_shifts20_001.json",
+        "instance_horizon60_employees100_shifts30_large.json"
     };
 }
 

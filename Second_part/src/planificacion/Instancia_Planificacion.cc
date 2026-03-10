@@ -73,14 +73,14 @@ InstanciaPlanificacion::InstanciaPlanificacion(const int dia_comienzo, const int
     numero_dias_ = numero_dias;
     dia_comienzo_ = dia_comienzo;
 
-    // Copy shared data
+    // Copiar los datos
     turnos_ = new std::vector<std::string>(*instancia.turnos_);
     empleados_ = new std::vector<std::string>(*instancia.empleados_);
     dias_libres_ = new std::vector<int>(*instancia.dias_libres_);
 
     int numero_turnos = turnos_->size();
 
-    // Create submatrices for the range of days
+    // Crear submatrices para el rango de dias
     matriz_satisfaccion_ = new std::vector<std::vector<std::vector<int>>>(numero_empleados_, std::vector<std::vector<int>>(numero_dias_, std::vector<int>(numero_turnos, 0)));
     
     auto original_sat = instancia.get_matriz_satisfaccion();
@@ -100,7 +100,7 @@ InstanciaPlanificacion::InstanciaPlanificacion(const int dia_comienzo, const int
         }
     }
 
-    json_data_ = nlohmann::json();  // Empty JSON for subinstances
+    json_data_ = nlohmann::json();  // JSON vacío para las subinstancias
 }
 
 int InstanciaPlanificacion::get_numero_empleados() const {
