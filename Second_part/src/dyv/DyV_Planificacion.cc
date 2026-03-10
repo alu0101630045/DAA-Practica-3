@@ -29,7 +29,7 @@ Solucion* DyVPlanificacion::SolveSmall(const Instancia& instancia) const {
     int num_empleados = inst_plan->get_numero_empleados();
     int num_dias = inst_plan->get_numero_dias();
 
-    // Manejo de seguridad por si llega una instancia de 0 días
+    // Por si llega una instancia de 0 días
     if (num_dias <= 0) {
         return new SolucionPlanificacion(num_empleados, 0);
     }
@@ -37,11 +37,11 @@ Solucion* DyVPlanificacion::SolveSmall(const Instancia& instancia) const {
     // Como Small() garantiza que num_dias es 1, creamos la solución para 1 día
     SolucionPlanificacion* solucion = new SolucionPlanificacion(num_empleados, 1);
     
-    // Solo tenemos que resolver el día 0 relativo de esta subinstancia
+    // Solo tenemos que resolver el día 0 de esta subinstancia
     int dia_relativo = 0; 
     int num_turnos = inst_plan->get_turnos().size();
 
-    // Asignación voraz pura: iteramos por cada turno del día
+    // Iteramos por los turnos de ese día
     for (int turno = 0; turno < num_turnos; ++turno) {
         int requeridos = inst_plan->get_empleados_necesarios_dia_turno(dia_relativo, turno);
         
@@ -59,7 +59,7 @@ Solucion* DyVPlanificacion::SolveSmall(const Instancia& instancia) const {
         // Ordenar candidatos por satisfacción de mayor a menor
         std::sort(candidatos.rbegin(), candidatos.rend());
         
-        // Asignar el turno a los 'N' mejores candidatos hasta cubrir la demanda
+        // Asignar el turno a los n mejores candidatos hasta cubrir la demanda
         for (int i = 0; i < std::min(requeridos, (int)candidatos.size()); ++i) {
             int emp = candidatos[i].second;
             solucion->set_turno_empleado_dia(emp, dia_relativo, turno);
@@ -83,18 +83,15 @@ std::pair<Instancia*, Instancia*> DyVPlanificacion::Divide(const Instancia& inst
     return {inst1, inst2};
 }
 
-Solucion* DyVPlanificacion::Combine(const Instancia& instancia,
-                                    const Solucion& solucion1,
-                                    const Solucion& solucion2) const {
+Solucion* DyVPlanificacion::Combine(const Instancia& instancia, const Solucion& solucion1, const Solucion& solucion2) const {
     const auto* inst_plan = dynamic_cast<const InstanciaPlanificacion*>(&instancia);
     const auto* sol1 = dynamic_cast<const SolucionPlanificacion*>(&solucion1);
     const auto* sol2 = dynamic_cast<const SolucionPlanificacion*>(&solucion2);
     
     if (!inst_plan || !sol1 || !sol2) return nullptr;
 
-    // La combinación es simple: concatenar las asignaciones
-    SolucionPlanificacion* solucion_combinada = new SolucionPlanificacion(sol1->get_numero_empleados(),
-                                                                            sol1->get_numero_dias() + sol2->get_numero_dias());
+    // Creamos una solución de tamaño sol1 + sol2
+    SolucionPlanificacion* solucion_combinada = new SolucionPlanificacion(sol1->get_numero_empleados(), sol1->get_numero_dias() + sol2->get_numero_dias());
 
     // Copiar primera mitad
     for (int e = 0; e < sol1->get_numero_empleados(); ++e) {
@@ -111,15 +108,14 @@ Solucion* DyVPlanificacion::Combine(const Instancia& instancia,
         }
     }
 
-    // Ajuste global en cada combinación para respetar restricciones y mejorar objetivo.
+    // Ajuste global en cada combinación
     AdjustRestDays(*inst_plan, *solucion_combinada);
-    ImproveGreedySolution(*inst_plan, *solucion_combinada);
+    CoverMissingShifts(*inst_plan, *solucion_combinada);
 
     return solucion_combinada;
 }
 
-void DyVPlanificacion::AdjustRestDays(const InstanciaPlanificacion& instancia,
-                                       SolucionPlanificacion& solucion) const {
+void DyVPlanificacion::AdjustRestDays(const InstanciaPlanificacion& instancia, SolucionPlanificacion& solucion) const {
     int num_empleados = instancia.get_numero_empleados();
     int num_dias = solucion.get_numero_dias();
 
@@ -136,25 +132,6 @@ void DyVPlanificacion::AdjustRestDays(const InstanciaPlanificacion& instancia,
         int deficit = dias_necesarios - dias_descanso;
         int removidos = 0;
 
-        // Primero intentar quitar turnos donde hay exceso de asignados
-        for (int dia = 0; dia < num_dias && removidos < deficit; ++dia) {
-            if (solucion.get_turno_empleado_dia(emp, dia) != -1) {
-                int turno = solucion.get_turno_empleado_dia(emp, dia);
-                
-                int asignados = 0;
-                for (int e = 0; e < num_empleados; ++e) {
-                    if (solucion.get_turno_empleado_dia(e, dia) == turno) {
-                        asignados++;
-                    }
-                }
-                
-                int requeridos = instancia.get_empleados_necesarios_dia_turno(dia, turno);
-                if (asignados > requeridos) {
-                    solucion.set_turno_empleado_dia(emp, dia, -1);
-                    removidos++;
-                }
-            }
-        }
 
         // Si aún falta, quitar turnos incluso si deja turnos sin cubrir (prioridad a días de descanso)
         for (int dia = 0; dia < num_dias && removidos < deficit; ++dia) {
@@ -166,8 +143,7 @@ void DyVPlanificacion::AdjustRestDays(const InstanciaPlanificacion& instancia,
     }
 }
 
-void DyVPlanificacion::CoverMissingShifts(const InstanciaPlanificacion& instancia,
-                                         SolucionPlanificacion& solucion) const {
+void DyVPlanificacion::CoverMissingShifts(const InstanciaPlanificacion& instancia, SolucionPlanificacion& solucion) const {
     int num_empleados = instancia.get_numero_empleados();
     int num_dias = solucion.get_numero_dias();
     int num_turnos = instancia.get_turnos().size();
@@ -207,66 +183,6 @@ void DyVPlanificacion::CoverMissingShifts(const InstanciaPlanificacion& instanci
             for (int i = 0; i < std::min(faltan, (int)candidatos.size()); ++i) {
                 int e = candidatos[i].second;
                 solucion.set_turno_empleado_dia(e, d, t);
-            }
-        }
-    }
-}
-
-void DyVPlanificacion::ImproveGreedySolution(const InstanciaPlanificacion& instancia,
-                                             SolucionPlanificacion& solucion) const {
-    // Primero intentar cubrir turnos faltantes
-    CoverMissingShifts(instancia, solucion);
-
-    // Luego intenta mejorar la solución voraz mediante búsqueda local
-    int num_empleados = instancia.get_numero_empleados();
-    int num_dias = solucion.get_numero_dias();
-    int num_turnos = instancia.get_turnos().size();
-    bool mejora_encontrada = true;
-
-    while (mejora_encontrada) {
-        mejora_encontrada = false;
-
-        // Intenta cambiar asignaciones para mejorar la satisfacción
-        for (int e = 0; e < num_empleados && !mejora_encontrada; ++e) {
-            for (int d = 0; d < num_dias && !mejora_encontrada; ++d) {
-                int turno_actual = solucion.get_turno_empleado_dia(e, d);
-                if (turno_actual == -1) continue;
-
-                int satisfaccion_actual = instancia.get_satisfaccion_empleado_dia(e, d, turno_actual);
-
-                // Intentar cambiar a otros turnos
-                for (int nuevo_turno = 0; nuevo_turno < num_turnos; ++nuevo_turno) {
-                    if (nuevo_turno == turno_actual) continue;
-
-                    int satisfaccion_nueva = instancia.get_satisfaccion_empleado_dia(e, d, nuevo_turno);
-                    
-                    if (satisfaccion_nueva > satisfaccion_actual) {
-                        // Verificar si podemos hacer el cambio
-                        int asignados_nuevo = 0;
-                        for (int emp = 0; emp < num_empleados; ++emp) {
-                            if (solucion.get_turno_empleado_dia(emp, d) == nuevo_turno) {
-                                asignados_nuevo++;
-                            }
-                        }
-                        
-                        int requeridos_nuevo = instancia.get_empleados_necesarios_dia_turno(d, nuevo_turno);
-                        int requeridos_actual = instancia.get_empleados_necesarios_dia_turno(d, turno_actual);
-                        
-                        // Contar asignados al turno actual
-                        int asignados_actual = 0;
-                        for (int emp = 0; emp < num_empleados; ++emp) {
-                            if (solucion.get_turno_empleado_dia(emp, d) == turno_actual) {
-                                asignados_actual++;
-                            }
-                        }
-
-                        // Verificar que cambio sea válido
-                        if (asignados_nuevo < requeridos_nuevo && asignados_actual > requeridos_actual) {
-                            solucion.set_turno_empleado_dia(e, d, nuevo_turno);
-                            mejora_encontrada = true;
-                        }
-                    }
-                }
             }
         }
     }

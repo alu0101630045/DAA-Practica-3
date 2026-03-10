@@ -41,8 +41,6 @@ std::pair<Instancia*, Instancia*> QuickSort::Divide(const Instancia& instancia) 
             right.push_back(num);
         }
     }
-
-    // Colocar el pivote en la derecha evita particiones de tamaño n en casos extremos.
     right.push_back(pivot);
     return {new InstanciaArray(left), new InstanciaArray(right)};
 }
